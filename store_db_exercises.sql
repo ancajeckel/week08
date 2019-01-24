@@ -86,8 +86,8 @@ go
    order by 1;
 
 --Creati o functie care va calcula pretul total pentru o anumita comanda
-if object_id(N'FCTGETORDERTOTALPRICE',N'F') is not null
-	drop procedure FctGetOrderTotalPrice;
+if object_id(N'FCTGETORDERTOTALPRICE',N'FN') is not null
+	drop function FctGetOrderTotalPrice;
 go
 
 create function FctGetOrderTotalPrice (@OrderId int)
