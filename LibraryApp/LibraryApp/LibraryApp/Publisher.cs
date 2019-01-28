@@ -46,7 +46,7 @@ namespace LibraryAppModels
             SqlParameter publisherParameter = DbManager.CreateNewParameterByNameAndValue("PublisherName", parName);
 
             //configure select command
-            string selectStatement = "select PublisherId from Publisher where lower(PublisherName) = lower(@PublisherName)";
+            string selectStatement = "select PublisherId from Publisher where lower(Name) = lower(@PublisherName)";
             SqlCommand command = new SqlCommand(selectStatement);
             command.Connection = parConnection;
             command.Parameters.Add(publisherParameter);
@@ -55,7 +55,7 @@ namespace LibraryAppModels
             return (int)command.ExecuteScalar();
         }
 
-        public int InsertNewPublisherDb(SqlConnection parConnection)
+        private int InsertNewPublisherDb(SqlConnection parConnection)
         {
             //set parameter
             SqlParameter publisherParameter = DbManager.CreateNewParameterByNameAndValue("PublisherName", this.Name);

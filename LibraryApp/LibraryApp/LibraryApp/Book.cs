@@ -94,7 +94,7 @@ namespace LibraryAppModels
             deleteCommand.Parameters.Add(bookidParameter);
 
             //execute command
-            return Convert.ToInt32(deleteCommand.ExecuteScalar());
+            return Convert.ToInt32(deleteCommand.ExecuteNonQuery());
         }
 
         public void SelectBookDb(SqlConnection parConnection)
