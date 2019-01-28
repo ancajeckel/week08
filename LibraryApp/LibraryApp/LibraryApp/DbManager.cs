@@ -60,5 +60,14 @@ namespace LibraryAppModels
 
             reader.Close();
         }
+
+        public static SqlParameter CreateNewParameterByNameAndValue(string parName, object parValue)
+        {
+            SqlParameter outParam = new SqlParameter();
+            outParam.ParameterName = parName;
+            outParam.Value = parValue;
+
+            return outParam;
+        }
     }
 }

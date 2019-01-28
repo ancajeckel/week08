@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F019B718-86BE-46E0-B7CA-99FC522229AB}</ProjectGuid>
+    <ProjectGuid>{21525057-053F-4F25-95D2-6AD2AA762117}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LibraryApp</RootNamespace>
-    <AssemblyName>LibraryApp</AssemblyName>
+    <RootNamespace>SummaryBookApp</RootNamespace>
+    <AssemblyName>SummaryBookApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="DbManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Publisher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryApp\LibraryAppModels.csproj">
+      <Project>{f019b718-86be-46e0-b7ca-99fc522229ab}</Project>
+      <Name>LibraryAppModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

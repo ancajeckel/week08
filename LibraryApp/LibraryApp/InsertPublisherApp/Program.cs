@@ -21,8 +21,8 @@ namespace InsertPublisherApp
 
             //insert new publisher
             Console.WriteLine("Insert new publisher with name: ");
-            Publisher publi1 = new Publisher(Console.ReadLine());
-            Console.WriteLine($"Publisher inserted with Id:{publi1.InsertNewPublisherDb(myConnection)}");
+            Publisher publi1 = new Publisher(myConnection, Console.ReadLine());
+            Console.WriteLine($"Publisher inserted with Id:{publi1.PublisherId}");
 
             //close connection
             DbManager.CloseConnection(myConnection);
